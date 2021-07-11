@@ -987,8 +987,50 @@ MonoBehaviour:
     secenek2: "\u0130zin Verme"
     cevap: 1
   - soru: "Uzayl\u0131lar bulundu"
-    secenek1: "insanlara a\xE7\u0131kla"
+    secenek1: "\u0130nsanlara A\xE7\u0131kla"
     secenek2: Gizle
+    cevap: 1
+  - soru: "Elon Musk t\xFCm d\xFCnyaya internet sa\u011Flamak i\xE7in uzaya 12 bin
+      uydu g\xF6nderecek. \u0130zin verilsin mi?"
+    secenek1: "\u0130zin Ver"
+    secenek2: "\u0130zin Verme"
+    cevap: 1
+  - soru: "T\xFCm d\xFCnyay\u0131 etkileyen bir Pandemi salg\u0131n\u0131 ba\u015Flad\u0131.
+      T\xFCm u\xE7u\u015Flar k\u0131sa s\xFCre durdurulacak."
+    secenek1: Onayla
+    secenek2: Onaylama
+    cevap: 1
+  - soru: "\xD6\u011Fretmenler maa\u015F\u0131ndan mutsuz. Maa\u015Flar\u0131 art\u0131r\u0131ls\u0131n
+      m\u0131?"
+    secenek1: "Maa\u015Flar\u0131 y\xFCkselt"
+    secenek2: "Maa\u015Flar ayn\u0131 kals\u0131n"
+    cevap: 1
+  - soru: "\u0130nekler \xE7ok gaz \xE7\u0131kartt\u0131\u011F\u0131 i\xE7in k\xFCresel
+      \u0131s\u0131nma art\u0131yor. \u0130neklerin yar\u0131s\u0131 uyutulsun mu?"
+    secenek1: Onaylama
+    secenek2: Onayla
+    cevap: 2
+  - soru: "Ormanl\u0131k arazide petrol bulundu. Petrol \xE7\u0131kart\u0131ls\u0131n
+      m\u0131?"
+    secenek1: "\u0130zin verme"
+    secenek2: "Petrol \xE7\u0131kart"
+    cevap: 2
+  - soru: "Denizler \xE7ok pislendi. Temizlensin mi?"
+    secenek1: Denizleri temizle
+    secenek2: Dokunma
+    cevap: 1
+  - soru: "Fabrika imar\u0131 i\xE7in izin isteniyor. (Orman yang\u0131n\u0131 emojisi
+      gelecek)"
+    secenek1: "G\xF6z yum"
+    secenek2: "Kar\u015F\u0131 \xE7\u0131k"
+    cevap: 2
+  - soru: "Kanser a\u015F\u0131s\u0131 bulundu. \xC7ip koyulsun mu?"
+    secenek1: Kabul et
+    secenek2: "Kar\u015F\u0131 \xE7\u0131k"
+    cevap: 1
+  - soru: "BikBok yasaklans\u0131n m\u0131?"
+    secenek1: Yasakla
+    secenek2: Yasaklama
     cevap: 1
 --- !u!1 &930752252
 GameObject:
