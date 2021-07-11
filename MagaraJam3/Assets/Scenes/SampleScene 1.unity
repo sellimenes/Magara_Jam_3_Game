@@ -1032,6 +1032,57 @@ MonoBehaviour:
     secenek1: Yasakla
     secenek2: Yasaklama
     cevap: 1
+  - soru: "Y\u0131k\u0131c\u0131 bir deprem ya\u015Fand\u0131. Yard\u0131m edilsin
+      mi?"
+    secenek1: "Kendi haline b\u0131rak"
+    secenek2: "Yard\u0131m et"
+    cevap: 2
+  - soru: "Yeni bir ter\xF6r \xF6rg\xFCt\xFC kuruldu."
+    secenek1: "Silah g\xF6nder"
+    secenek2: "Kar\u015F\u0131 \xE7\u0131k"
+    cevap: 2
+  - soru: "Afrika'da yeni su kaynaklar\u0131 bulundu ama \xE7\u0131kar\u0131lam\u0131yor."
+    secenek1: "Yard\u0131m et"
+    secenek2: "Kendi haline b\u0131rak"
+    cevap: 1
+  - soru: "Asya'da tsunami felaketi ya\u015Fand\u0131. Yard\u0131ma ihitya\xE7lar\u0131
+      var."
+    secenek1: "Kendi haline b\u0131rak"
+    secenek2: "Yard\u0131m et"
+    cevap: 2
+  - soru: "Yeni oyun konsollar\u0131 yay\u0131nland\u0131."
+    secenek1: "Vergileri art\u0131r"
+    secenek2: "Hi\xE7bir \u015Fey yapma"
+    cevap: 2
+  - soru: "Ticari sebeplerle yo\u011Fun gemi kullan\u0131m\u0131, k\xFCresel \u0131s\u0131nmay\u0131
+      etkiliyor. Gemi ticareti yasaklans\u0131n m\u0131?"
+    secenek1: "Yasaklans\u0131n"
+    secenek2: "Yasaklanmas\u0131n"
+    cevap: 1
+  - soru: "O\u011Flun ka\xE7\u0131r\u0131ld\u0131. O\u011Flunun kurtulmas\u0131n\u0131
+      istersen 100 rehin \xF6ld\xFCr\xFClecek. Se\xE7im senin."
+    secenek1: "O\u011Flunu kurtar"
+    secenek2: Rehinleri kurtar
+    cevap: 2
+  - soru: "Ter\xF6ristler \xE7ok say\u0131da vatanda\u015F\u0131 rehin ald\u0131.
+      \u0130stenen paray\u0131 vermezsen hepsi \xF6ld\xFCr\xFClecek."
+    secenek1: "Paray\u0131 ver"
+    secenek2: "Hi\xE7bir \u015Fey yapma"
+    cevap: 1
+  - soru: "Fosil yak\u0131t kullan\u0131m\u0131 durdurulmal\u0131. K\xFCresel \u0131s\u0131nma
+      h\u0131zland\u0131."
+    secenek1: Durdurulsun
+    secenek2: "Durdurulmas\u0131n"
+    cevap: 1
+  - soru: "Sigaralar yasaklans\u0131n m\u0131?"
+    secenek1: "Yasaklans\u0131n"
+    secenek2: "Yasaklanmas\u0131n"
+    cevap: 1
+  - soru: "Baz istasyonlar\u0131 \xE7ok fazla radrasyon yay\u0131yor. Kald\u0131r\u0131ls\u0131n
+      m\u0131?"
+    secenek1: "Kald\u0131r\u0131ls\u0131n"
+    secenek2: Dokunma
+    cevap: 1
 --- !u!1 &930752252
 GameObject:
   m_ObjectHideFlags: 0
