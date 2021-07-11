@@ -543,7 +543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &75097414
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3485,7 +3485,7 @@ MonoBehaviour:
   secenek1_txt: {fileID: 1002428255}
   secenek2_txt: {fileID: 1311767925}
   cevap: 0
-  para: 0
+  para: 1000000
   maxSaglik: 100
   currentsaglik: 50
   maxMutluluk: 100

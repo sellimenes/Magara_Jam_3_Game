@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -571,5 +571,9 @@ public class GameManager : MonoBehaviour
     {
         para += yükselt;
         worldConroller.Para.text = para.ToString();
+    }
+    public void GeriCýk()
+    {
+        SceneManager.LoadScene(0);
     }
 }
