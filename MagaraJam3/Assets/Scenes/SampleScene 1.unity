@@ -528,11 +528,11 @@ MonoBehaviour:
       - m_Target: {fileID: 812266290}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Sorular
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: b
           m_BoolArgument: 0
@@ -661,11 +661,11 @@ MonoBehaviour:
       - m_Target: {fileID: 812266290}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Sorular
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: a
           m_BoolArgument: 0
@@ -946,17 +946,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae391482ddf5fab44b3512a3a73a32db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventsistem: {fileID: 0}
   eventler: {fileID: 812266291}
   suankisoru:
     soru: 
     secenek1: 
     secenek2: 
-    cevap: 
+    cevap: 0
   Sorutxt: {fileID: 191299377}
   secenek1_txt: {fileID: 1002428255}
   secenek2_txt: {fileID: 1311767925}
-  cevap: 
+  cevap: 0
   para: 0
   maxSaglik: 100
   currentsaglik: 50
@@ -964,7 +963,6 @@ MonoBehaviour:
   currentMutluluk: 0
   sorulanlar: 
   worldConroller: {fileID: 1713541382}
-  randomid: 0
 --- !u!114 &812266291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,16 +980,16 @@ MonoBehaviour:
       Yaln\u0131zca elektrikli ara\xE7lar kullan\u0131ls\u0131n."
     secenek1: Onayla
     secenek2: Onaylama
-    cevap: a
+    cevap: 1
   - soru: "Amazon Ormanlar\u0131'n\u0131n b\xFCy\xFCk bir b\xF6l\xFCm\xFC kesilip
       \xF6zel bir tatil k\xF6y\xFC yap\u0131lacak."
     secenek1: "\u0130zin Ver"
     secenek2: "\u0130zin Verme"
-    cevap: a
+    cevap: 1
   - soru: "Uzayl\u0131lar bulundu"
     secenek1: "insanlara a\xE7\u0131kla"
     secenek2: Gizle
-    cevap: a
+    cevap: 1
 --- !u!1 &930752252
 GameObject:
   m_ObjectHideFlags: 0

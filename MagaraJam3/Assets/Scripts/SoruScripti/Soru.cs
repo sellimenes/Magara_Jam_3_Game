@@ -8,10 +8,10 @@ public class Soru
     public string soru;
     public string secenek1;
     public string secenek2;
-    public string cevap;
+    public int cevap;
 
 
-    void sorular(string Soru, string Secenek1, string Secenek2,string Cevap)
+    void sorular(string Soru, string Secenek1, string Secenek2,int Cevap)
     {
         soru = Soru;
         secenek1 = Secenek1;
