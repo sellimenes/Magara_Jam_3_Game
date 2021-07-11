@@ -5,10 +5,11 @@ using UnityEngine.UI;
 public class WorldConroller : MonoBehaviour
 {
     public int para;
+    
 
     public Slider dunyaSagligi;
     public Slider MutlulukOraný;
-
+    
     public Text Para;
     
     public void SetMaxSaglik(int saglik)
@@ -32,4 +33,6 @@ public class WorldConroller : MonoBehaviour
         MutlulukOraný.value = mutluluk;
 
     }
+
+   
 }
