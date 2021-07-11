@@ -6277,8 +6277,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Worlds1: []
   Worlds2: []
-  Objects1_iyi: []
-  "Objects1_k\xF6t\xFC": []
+  Objects1_iyi:
+  - {fileID: 594496961}
+  - {fileID: 370272692}
+  - {fileID: 1708169873}
+  - {fileID: 1393436158}
+  - {fileID: 761555364}
+  - {fileID: 490842037}
+  - {fileID: 1317826651}
+  - {fileID: 1968732537}
+  - {fileID: 1350096876}
+  - {fileID: 227156274}
+  - {fileID: 791992645}
+  - {fileID: 1011369701}
+  - {fileID: 1452972217}
+  - {fileID: 554423475}
+  - {fileID: 1785911979}
+  - {fileID: 1796287445}
+  - {fileID: 820050693}
+  "Objects1_k\xF6t\xFC":
+  - {fileID: 277085782}
+  - {fileID: 1364868503}
+  - {fileID: 1281076711}
+  - {fileID: 1500860029}
+  - {fileID: 315528913}
+  - {fileID: 909715845}
+  - {fileID: 1609670031}
+  - {fileID: 1197770651}
+  - {fileID: 1049398875}
+  - {fileID: 642510817}
+  - {fileID: 829645088}
+  - {fileID: 399299601}
+  - {fileID: 228480204}
+  - {fileID: 671408872}
+  - {fileID: 1250975869}
+  - {fileID: 1915589749}
+  - {fileID: 964740112}
   Objects2_iyi: []
   "Objects2_k\xF6t\xFC": []
   gameManager: {fileID: 0}
