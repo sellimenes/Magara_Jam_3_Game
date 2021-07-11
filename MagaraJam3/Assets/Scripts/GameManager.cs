@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public Soru suankisoru;
 
     public Text Sorutxt, secenek1_txt, secenek2_txt;
-    public string cevap;
+    public int cevap;
     public int para;
 
     public int maxSaglik = 100;
@@ -21,12 +21,11 @@ public class GameManager : MonoBehaviour
     public int maxMutluluk = 100;
     public int currentMutluluk;
 
-    public List<int> cozulensoruindexleri = new List<int>();
+    int randomid;
     public List<bool> sorulanlar;
 
     public WorldConroller worldConroller;
-    string secenek;
-    public int randomid;
+   
 
     private void Start()
     {
@@ -34,49 +33,51 @@ public class GameManager : MonoBehaviour
         worldConroller.SetMaxSaglik(maxSaglik);
         worldConroller.SetMaxMutluluk(maxMutluluk);
         currentMutluluk = maxMutluluk;
+        randomid = Random.Range(0, eventler.Sorular.Count-1);
 
         for (int i = 0; i < eventler.Sorular.Count; i++)
         {
             sorulanlar.Add(false);
         }
-        SoruVer();
+        SoruEkle();
     }
-    public void SoruVer()
+    public void SoruEkle()
     {
+        suankisoru = eventler.Sorular[randomid];
         for (int i = 0; i < sorulanlar.Count; i++)
         {
             if (sorulanlar[i] == false)
             {
-                randomid = Random.Range(0, eventler.Sorular.Count);
-                suankisoru = eventler.Sorular[randomid];
-                if (sorulanlar[randomid] == false)
+                int sorusayi = Random.Range(0, sorulanlar.Count);
+                if (sorulanlar[sorusayi] == false)
                 {
                     
-                    Sorutxt.text = eventler.Sorular[randomid].soru;
-                    secenek1_txt.text = eventler.Sorular[randomid].secenek1;
-                    secenek2_txt.text = eventler.Sorular[randomid].secenek2;
-                    cevap = eventler.Sorular[randomid].cevap;
+                    sorulanlar[sorusayi] = true;
+                    Sorutxt.text = eventler.Sorular[sorusayi].soru;
+                    secenek1_txt.text = eventler.Sorular[sorusayi].secenek1;
+                    secenek2_txt.text = eventler.Sorular[sorusayi].secenek2;
+                    cevap = eventler.Sorular[sorusayi].cevap;
                 }
                 else
                 {
-                    SoruVer();
+                    SoruEkle();
                 }
+                
                 break;
             }
             if (i == sorulanlar.Count - 1)
             {
-                Debug.Log("Oyun Bitti");
+                Debug.Log("HOPP");
             }
         }
     }
-
-    public void Sorular(string secenek)
+        public void Sorular(int deger)
     {
 
         if (suankisoru == eventler.Sorular[0])
         {
 
-            if (secenek == suankisoru.cevap)
+            if (deger == cevap)
             {
                 //eventsistem.sonuc = "Onayla";
                 DunyaSaglýgýnýDusur(20);
@@ -91,12 +92,12 @@ public class GameManager : MonoBehaviour
                 ParaDusur(1000);
             }
             //StartCoroutine(eventsistem.Soru1Event());
-            SoruVer();
+            SoruEkle();
         }
 
         if (suankisoru == eventler.Sorular[1])
         {
-            if (secenek == suankisoru.cevap)
+            if (deger == cevap)
             {
                // eventsistem.sonuc = "Ýzin Ver";
                 DunyaSaglýgýnýDusur(5);
@@ -111,14 +112,14 @@ public class GameManager : MonoBehaviour
 
             }
             //StartCoroutine(eventsistem.Soru2Event());
-            SoruVer();
+            SoruEkle();
         }
 
 
 
         if (suankisoru == eventler.Sorular[2])
         {
-            if (secenek == suankisoru.cevap)
+            if (deger == cevap)
             {
                 //eventsistem.sonuc = "Ýnsanlara Açýkla";
                 MutluluguYukselt(10);
@@ -129,7 +130,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruVer();
+            SoruEkle();
         }
     }
 
