@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
                 MutluluguYukselt(10);
                 ParaDusur(1000);
             }
-            //StartCoroutine(eventsistem.Soru1Event());
+            StartCoroutine(eventsistem.Soru1Event());
 
         }
         //2.Soru
@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
                 ParaDusur(1000);
 
             }
-            //StartCoroutine(eventsistem.Soru2Event());
+            StartCoroutine(eventsistem.Soru2Event());
 
         }
 
@@ -148,7 +148,7 @@ public class GameManager : MonoBehaviour
                 eventsistem.sonuc = "3.2";//Gizle
                 MutluluguDusur(10);
             }
-            //StartCoroutine(eventsistem.Soru3Event());
+            StartCoroutine(eventsistem.Soru3Event());
 
         }
 
@@ -167,7 +167,7 @@ public class GameManager : MonoBehaviour
                 eventsistem.sonuc = "4.2";
                 MutluluguDusur(10);
             }
-            //StartCoroutine(eventsistem.Soru4Event());
+            StartCoroutine(eventsistem.Soru4Event());
 
         }
         if (suankisoru == eventler.Sorular[4])
@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour
                 DunyaSaglýgýnýDusur(10);
                 ParaYükselt(10000);
             }
-            //StartCoroutine(eventsistem.Soru5Event());
+            StartCoroutine(eventsistem.Soru5Event());
 
         }
         if (suankisoru == eventler.Sorular[5])
@@ -205,7 +205,7 @@ public class GameManager : MonoBehaviour
                 DunyaSaglýgýnýDusur(10);
                 ParaYükselt(10000);
             }
-            //StartCoroutine(eventsistem.Soru6Event());
+            StartCoroutine(eventsistem.Soru6Event());
 
         }
         if (suankisoru == eventler.Sorular[6])
@@ -224,7 +224,7 @@ public class GameManager : MonoBehaviour
                 DunyaSaglýgýnýYükselt(10);
                 ParaYükselt(1000);
             }
-            //StartCoroutine(eventsistem.Soru7Event());
+            StartCoroutine(eventsistem.Soru7Event());
 
         }
 
@@ -242,7 +242,7 @@ public class GameManager : MonoBehaviour
                 DunyaSaglýgýnýDusur(10);
                 ParaYükselt(1000000);
             }
-            // StartCoroutine(eventsistem.Soru8Event());
+            StartCoroutine(eventsistem.Soru8Event());
 
         }
         if (suankisoru == eventler.Sorular[8])
@@ -260,7 +260,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(10);
                 DunyaSaglýgýnýDusur(10);
             }
-            //StartCoroutine(eventsistem.Soru9Event());
+            StartCoroutine(eventsistem.Soru9Event());
 
         }
         if (suankisoru == eventler.Sorular[9])
@@ -278,7 +278,7 @@ public class GameManager : MonoBehaviour
                 MutluluguYukselt(10);
                 ParaDusur(150000);
             }
-            // StartCoroutine(eventsistem.Soru10Event());
+            StartCoroutine(eventsistem.Soru10Event());
 
         }
         if (suankisoru == eventler.Sorular[10])
@@ -297,7 +297,7 @@ public class GameManager : MonoBehaviour
                 DunyaSaglýgýnýDusur(5);
                 ParaDusur(558776);
             }
-            //StartCoroutine(eventsistem.Soru11Event());
+            StartCoroutine(eventsistem.Soru11Event());
 
         }
         if (suankisoru == eventler.Sorular[11])
@@ -316,7 +316,7 @@ public class GameManager : MonoBehaviour
                 ParaYükselt(1055677);
                 MutluluguYukselt(5);
             }
-            // StartCoroutine(eventsistem.Soru12Event());
+            StartCoroutine(eventsistem.Soru12Event());
 
         }
         if (suankisoru == eventler.Sorular[12])
@@ -335,7 +335,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(15);
 
             }
-            //StartCoroutine(eventsistem.Soru13Event());
+            StartCoroutine(eventsistem.Soru13Event());
 
         }
         if (suankisoru == eventler.Sorular[13])
@@ -354,7 +354,7 @@ public class GameManager : MonoBehaviour
                 ParaDusur(2000025);
                 MutluluguYukselt(7);
             }
-            //StartCoroutine(eventsistem.Soru14Event());
+            StartCoroutine(eventsistem.Soru14Event());
 
         }
         if (suankisoru == eventler.Sorular[14])//afrika
@@ -372,7 +372,7 @@ public class GameManager : MonoBehaviour
                 DunyaSaglýgýnýDusur(10);
                 MutluluguDusur(10);
             }
-            //StartCoroutine(eventsistem.Soru15Event());
+            StartCoroutine(eventsistem.Soru15Event());
 
         }
         if (suankisoru == eventler.Sorular[15])
@@ -391,7 +391,7 @@ public class GameManager : MonoBehaviour
                 DunyaSaglýgýnýYükselt(10);
                 ParaDusur(1500020);
             }
-            //StartCoroutine(eventsistem.Soru16Event());
+            StartCoroutine(eventsistem.Soru16Event());
 
         }
         if (suankisoru == eventler.Sorular[16])
@@ -408,7 +408,7 @@ public class GameManager : MonoBehaviour
                 ParaYükselt(20);
                 MutluluguDusur(10);
             }
-            // StartCoroutine(eventsistem.Soru17Event());
+            StartCoroutine(eventsistem.Soru17Event());
 
         }
         if (suankisoru == eventler.Sorular[17])
@@ -426,7 +426,7 @@ public class GameManager : MonoBehaviour
                 ParaDusur(1236000);
 
             }
-            //StartCoroutine(eventsistem.Soru18Event());
+            StartCoroutine(eventsistem.Soru18Event());
 
         }
         if (suankisoru == eventler.Sorular[18])
@@ -443,7 +443,7 @@ public class GameManager : MonoBehaviour
                 DunyaSaglýgýnýDusur(10);
                 ParaYükselt(50002500);
             }
-            //StartCoroutine(eventsistem.Soru19Event());
+            StartCoroutine(eventsistem.Soru19Event());
 
         }
         if (suankisoru == eventler.Sorular[19])
@@ -459,7 +459,7 @@ public class GameManager : MonoBehaviour
                 eventsistem.sonuc = "20.2";
                 MutluluguYukselt(20);
             }
-            // StartCoroutine(eventsistem.Soru20Event());
+            StartCoroutine(eventsistem.Soru20Event());
 
         }
         if (suankisoru == eventler.Sorular[20])
@@ -478,7 +478,7 @@ public class GameManager : MonoBehaviour
 
                 MutluluguDusur(10);
             }
-            //StartCoroutine(eventsistem.Soru21Event());
+            StartCoroutine(eventsistem.Soru21Event());
 
         }
         if (suankisoru == eventler.Sorular[21])
@@ -497,7 +497,7 @@ public class GameManager : MonoBehaviour
                 ParaYükselt(100250);
                 MutluluguDusur(10);
             }
-            //StartCoroutine(eventsistem.Soru22Event());
+            StartCoroutine(eventsistem.Soru22Event());
 
         }
         if (suankisoru == eventler.Sorular[22])
@@ -516,7 +516,7 @@ public class GameManager : MonoBehaviour
                 ParaYükselt(100500);
                 MutluluguYukselt(15);
             }
-            //StartCoroutine(eventsistem.Soru23Event());
+            StartCoroutine(eventsistem.Soru23Event());
 
         }
         /*if (suankisoru == eventler.Sorular[23])
