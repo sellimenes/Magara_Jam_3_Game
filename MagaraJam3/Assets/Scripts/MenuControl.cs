@@ -9,6 +9,10 @@ public class MenuControl : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void SistemiKapat()
+    {
+        Application.Quit();
+    }
 
     
 }
