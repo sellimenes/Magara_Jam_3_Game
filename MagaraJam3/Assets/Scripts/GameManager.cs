@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(10);
                 ParaDusur(1000);
             }
-            //StartCoroutine(eventsistem.Soru1Event());
+            StartCoroutine(eventsistem.Soru1Event());
 
         }
 
