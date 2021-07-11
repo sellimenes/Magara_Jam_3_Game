@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class EventSistem : MonoBehaviour
 {
-    //public GameObject[] Worlds;//2 adet dünyamýzý buraya atýyoruz
+    public GameObject[] Worlds1;
+    public GameObject[] Worlds2;
     public GameObject[] Objects1_iyi;//kendi dünyamýzdaki iyi objeleri buraya atýyoruz.
     public GameObject[] Objects1_kötü;//kendi dünyamýzdaki kötü objeleri buraya atýyoruz
     public GameObject[] Objects2_iyi;//2. dünyadaki iyi objeleri buraya atýyoruz
@@ -19,6 +20,25 @@ public class EventSistem : MonoBehaviour
     {
         randomObjects = Random.Range(0, 2);
     }
+
+    public void MapDegistir()
+    {
+        if (gameManager.currentsaglik <= 75)
+        {
+            Worlds1[0].SetActive(false);
+            Worlds1[1].SetActive(true);
+        }
+        else if (gameManager.currentsaglik <= 50)
+        {
+            Worlds1[1].SetActive(false);
+            Worlds1[2].SetActive(true);
+        }else if (gameManager.currentsaglik <= 25)
+        {
+            Worlds1[2].SetActive(false);
+            Worlds1[3].SetActive(true);
+        }
+    }
+
     public IEnumerator Soru1Event()
     {
 

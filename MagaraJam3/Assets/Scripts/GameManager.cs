@@ -49,9 +49,11 @@ public class GameManager : MonoBehaviour
 
     }
 
+    
+
     public IEnumerator SoruEkle()
     {
-
+        
         yield return new WaitForSeconds(5);
         eventPanel.SetActive(true);
         for (int i = 0; i < sorulanlar.Count; i++)
@@ -86,7 +88,7 @@ public class GameManager : MonoBehaviour
     public void Sorular(int deger)
     {
         eventPanel.SetActive(false);
-
+        eventsistem.MapDegistir();
         if (suankisoru == eventler.Sorular[0])
         {
 

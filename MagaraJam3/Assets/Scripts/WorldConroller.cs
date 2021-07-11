@@ -21,6 +21,7 @@ public class WorldConroller : MonoBehaviour
     {
         dunyaSagligi.value = saglik;
 
+
     }
 
     public void SetMaxMutluluk(int mutluluk)
