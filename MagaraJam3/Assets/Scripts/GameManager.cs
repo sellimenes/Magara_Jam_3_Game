@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //public EventSistem eventsistem;
+    public EventSistem eventsistem;
     public Eventler eventler;
     public Soru suankisoru;
 
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public List<bool> sorulanlar;
 
     public WorldConroller worldConroller;
-   
+
 
     private void Start()
     {
@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour
         worldConroller.SetMaxSaglik(maxSaglik);
         worldConroller.SetMaxMutluluk(maxMutluluk);
         currentMutluluk = maxMutluluk;
-        randomid = Random.Range(0, eventler.Sorular.Count-1);
-
+        randomid = Random.Range(0, eventler.Sorular.Count -1);
+        suankisoru = eventler.Sorular[randomid];
         for (int i = 0; i < eventler.Sorular.Count; i++)
         {
             sorulanlar.Add(false);
@@ -44,14 +44,16 @@ public class GameManager : MonoBehaviour
     public void SoruEkle()
     {
         suankisoru = eventler.Sorular[randomid];
+
         for (int i = 0; i < sorulanlar.Count; i++)
         {
             if (sorulanlar[i] == false)
             {
+                
                 int sorusayi = Random.Range(0, sorulanlar.Count);
                 if (sorulanlar[sorusayi] == false)
                 {
-                    
+                   
                     sorulanlar[sorusayi] = true;
                     Sorutxt.text = eventler.Sorular[sorusayi].soru;
                     secenek1_txt.text = eventler.Sorular[sorusayi].secenek1;
@@ -62,8 +64,9 @@ public class GameManager : MonoBehaviour
                 {
                     SoruEkle();
                 }
-                
+
                 break;
+                
             }
             if (i == sorulanlar.Count - 1)
             {
@@ -71,7 +74,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-        public void Sorular(int deger)
+    public void Sorular(int deger)
     {
 
         if (suankisoru == eventler.Sorular[0])
@@ -79,19 +82,19 @@ public class GameManager : MonoBehaviour
 
             if (deger == cevap)
             {
-                //eventsistem.sonuc = "Onayla";
+                eventsistem.sonuc = "Onayla";
                 DunyaSaglýgýnýDusur(20);
                 MutluluguYukselt(10);
                 ParaYükselt(10000);
             }
             else
             {
-                //eventsistem.sonuc = "Onaylama";
+                eventsistem.sonuc = "Onaylama";
                 DunyaSaglýgýnýYükselt(10);
                 MutluluguDusur(10);
                 ParaDusur(1000);
             }
-            //StartCoroutine(eventsistem.Soru1Event());
+            StartCoroutine(eventsistem.Soru1Event());
             SoruEkle();
         }
 
@@ -99,19 +102,19 @@ public class GameManager : MonoBehaviour
         {
             if (deger == cevap)
             {
-               // eventsistem.sonuc = "Ýzin Ver";
+                eventsistem.sonuc = "Ýzin Ver";
                 DunyaSaglýgýnýDusur(5);
                 MutluluguDusur(3);
                 ParaYükselt(10000);
             }
             else
             {
-                //eventsistem.sonuc = "Ýzin Verme";
+                eventsistem.sonuc = "Ýzin Verme";
                 MutluluguYukselt(3);
                 ParaDusur(1000);
 
             }
-            //StartCoroutine(eventsistem.Soru2Event());
+            StartCoroutine(eventsistem.Soru2Event());
             SoruEkle();
         }
 
@@ -121,15 +124,15 @@ public class GameManager : MonoBehaviour
         {
             if (deger == cevap)
             {
-                //eventsistem.sonuc = "Ýnsanlara Açýkla";
+                eventsistem.sonuc = "Ýnsanlara Açýkla";
                 MutluluguYukselt(10);
             }
             else
             {
-               // eventsistem.sonuc = "Gizle";
+                eventsistem.sonuc = "Gizle";
                 MutluluguDusur(10);
             }
-            //StartCoroutine(eventsistem.Soru3Event());
+            StartCoroutine(eventsistem.Soru3Event());
             SoruEkle();
         }
     }

@@ -38,8 +38,6 @@ public class EventSistem : MonoBehaviour
             Objects2_iyi[0].SetActive(true);//kötü objelerden rastgele bir tanesi 2. dünyada aktif edildi.
 
         }
-
-
     }
     public IEnumerator Soru2Event()
     {
@@ -80,8 +78,6 @@ public class EventSistem : MonoBehaviour
             Objects2_kötü[0].SetActive(true);//kötü objelerden rastgele bir tanesi 2. dünyada aktif edildi.
 
         }
-
-
     }
 }
 
