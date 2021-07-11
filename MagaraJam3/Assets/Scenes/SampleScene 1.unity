@@ -946,6 +946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae391482ddf5fab44b3512a3a73a32db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventsistem: {fileID: 0}
   eventler: {fileID: 812266291}
   suankisoru:
     soru: 
@@ -1014,7 +1015,7 @@ MonoBehaviour:
       m\u0131?"
     secenek1: "\u0130zin verme"
     secenek2: "Petrol \xE7\u0131kart"
-    cevap: 2
+    cevap: 1
   - soru: "Denizler \xE7ok pislendi. Temizlensin mi?"
     secenek1: Denizleri temizle
     secenek2: Dokunma
