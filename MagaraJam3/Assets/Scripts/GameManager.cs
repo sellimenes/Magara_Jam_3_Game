@@ -33,8 +33,7 @@ public class GameManager : MonoBehaviour
         worldConroller.SetMaxSaglik(maxSaglik);
         worldConroller.SetMaxMutluluk(maxMutluluk);
         currentMutluluk = maxMutluluk;
-        randomid = Random.Range(0, eventler.Sorular.Count -1);
-        suankisoru = eventler.Sorular[randomid];
+       
         for (int i = 0; i < eventler.Sorular.Count; i++)
         {
             sorulanlar.Add(false);
@@ -43,7 +42,7 @@ public class GameManager : MonoBehaviour
     }
     public void SoruEkle()
     {
-        suankisoru = eventler.Sorular[randomid];
+        
 
         for (int i = 0; i < sorulanlar.Count; i++)
         {
@@ -53,7 +52,7 @@ public class GameManager : MonoBehaviour
                 int sorusayi = Random.Range(0, sorulanlar.Count);
                 if (sorulanlar[sorusayi] == false)
                 {
-                   
+                    suankisoru = eventler.Sorular[sorusayi];
                     sorulanlar[sorusayi] = true;
                     Sorutxt.text = eventler.Sorular[sorusayi].soru;
                     secenek1_txt.text = eventler.Sorular[sorusayi].secenek1;
@@ -95,7 +94,7 @@ public class GameManager : MonoBehaviour
                 ParaDusur(1000);
             }
             StartCoroutine(eventsistem.Soru1Event());
-            SoruEkle();
+           
         }
 
         if (suankisoru == eventler.Sorular[1])
@@ -115,7 +114,7 @@ public class GameManager : MonoBehaviour
 
             }
             StartCoroutine(eventsistem.Soru2Event());
-            SoruEkle();
+            
         }
 
 
@@ -133,7 +132,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(10);
             }
             StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+           
         }
         if (suankisoru == eventler.Sorular[3])
         {
@@ -150,7 +149,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[4])
         {
@@ -169,7 +168,7 @@ public class GameManager : MonoBehaviour
                 ParaYükselt(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[5])
         {
@@ -188,7 +187,7 @@ public class GameManager : MonoBehaviour
                 ParaYükselt(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[6])
         {
@@ -206,7 +205,7 @@ public class GameManager : MonoBehaviour
                 DunyaSaglýgýnýDusur(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[7])
         {
@@ -223,7 +222,7 @@ public class GameManager : MonoBehaviour
                 ParaYükselt(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[8])
         {
@@ -241,7 +240,7 @@ public class GameManager : MonoBehaviour
                 DunyaSaglýgýnýDusur(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[9])
         {
@@ -259,7 +258,7 @@ public class GameManager : MonoBehaviour
                 ParaYükselt(15);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[10])
         {
@@ -278,7 +277,7 @@ public class GameManager : MonoBehaviour
                 ParaDusur(5);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[11])
         {
@@ -297,7 +296,7 @@ public class GameManager : MonoBehaviour
                 MutluluguYukselt(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[12])
         {
@@ -315,7 +314,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(15);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[13])
         {
@@ -334,7 +333,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[14])
         {
@@ -352,7 +351,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[15])
         {
@@ -370,7 +369,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+           
         }
         if (suankisoru == eventler.Sorular[16])
         {
@@ -387,7 +386,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[17])
         {
@@ -406,7 +405,7 @@ public class GameManager : MonoBehaviour
                 MutluluguYukselt(5);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[18])
         {
@@ -421,7 +420,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(20);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[19])
         {
@@ -437,7 +436,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(20);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+           
         }
         if (suankisoru == eventler.Sorular[20])
         {
@@ -456,7 +455,7 @@ public class GameManager : MonoBehaviour
                 MutluluguDusur(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+           
         }
         if (suankisoru == eventler.Sorular[21])
         {
@@ -475,7 +474,7 @@ public class GameManager : MonoBehaviour
                 MutluluguYukselt(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+            
         }
         if (suankisoru == eventler.Sorular[22])
         {
@@ -492,9 +491,9 @@ public class GameManager : MonoBehaviour
                 ParaYükselt(10);
             }
             //StartCoroutine(eventsistem.Soru3Event());
-            SoruEkle();
+           
         }
-
+        SoruEkle();
     }
 
     void DunyaSaglýgýnýDusur(int dusur)
