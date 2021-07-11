@@ -527,7 +527,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 812266290}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: EventSorular
+        m_MethodName: Sorular
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -660,7 +660,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 812266290}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: EventSorular
+        m_MethodName: Sorular
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -946,16 +946,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae391482ddf5fab44b3512a3a73a32db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventsistem: {fileID: 0}
   eventler: {fileID: 812266291}
   suankisoru:
     soru: 
     secenek1: 
     secenek2: 
     cevap: 
-  Objects1_iyi: []
-  "Objects1_k\xF6t\xFC": []
-  Objects2_iyi: []
-  "Objects2_k\xF6t\xFC": []
   Sorutxt: {fileID: 191299377}
   secenek1_txt: {fileID: 1002428255}
   secenek2_txt: {fileID: 1311767925}

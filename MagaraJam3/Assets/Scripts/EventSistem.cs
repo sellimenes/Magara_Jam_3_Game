@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class EventSistem : MonoBehaviour
-{/*
+{
     //public GameObject[] Worlds;//2 adet dünyamýzý buraya atýyoruz
     public GameObject[] Objects1_iyi;//kendi dünyamýzdaki iyi objeleri buraya atýyoruz.
     public GameObject[] Objects1_kötü;//kendi dünyamýzdaki kötü objeleri buraya atýyoruz
@@ -82,6 +82,6 @@ public class EventSistem : MonoBehaviour
         }
 
 
-    }*/
+    }
 }
 
