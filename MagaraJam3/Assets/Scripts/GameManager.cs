@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
             }
             if (i == sorulanlar.Count - 1)
             {
-                Debug.Log("HOPP");
+                SceneManager.LoadScene(4);
             }
         }
     }
