@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public int para;
 
     public int maxSaglik = 100;
-    public int currentsaglik;
+    public int currentsaglik = 100;
 
     public int maxMutluluk = 100;
     public int currentMutluluk;

@@ -15,7 +15,7 @@ public class WorldConroller : MonoBehaviour
     public void SetMaxSaglik(int saglik)
     {
         dunyaSagligi.maxValue = saglik;
-        dunyaSagligi.value = 50;
+        dunyaSagligi.value = 100;
     }
     public void DunyaSagligi(int saglik)
     {

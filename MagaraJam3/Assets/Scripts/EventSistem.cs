@@ -23,16 +23,17 @@ public class EventSistem : MonoBehaviour
 
    public void MapDegistir()
     {
-        if (gameManager.currentsaglik <= 75)
+        if (gameManager.currentsaglik <= 75 && gameManager.currentsaglik > 50)
         {
             Worlds1[0].SetActive(false);
             Worlds1[1].SetActive(true);
         }
-        else if (gameManager.currentsaglik <= 50)
+        else if (gameManager.currentsaglik <= 50 && gameManager.currentsaglik > 25)
         {
             Worlds1[1].SetActive(false);
             Worlds1[2].SetActive(true);
-        }else if (gameManager.currentsaglik <= 25)
+        }
+        else if (gameManager.currentsaglik <= 25)
         {
             Worlds1[2].SetActive(false);
             Worlds1[3].SetActive(true);
