@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final.unity
     guid: da35b13b6a7ef3240ae9c8c95a619cc3
+  - enabled: 1
+    path: Assets/Scenes/Galibiyet.unity
+    guid: 2dfdb1ed04377de43a97f1dc937b6b55
   m_configObjects: {}
