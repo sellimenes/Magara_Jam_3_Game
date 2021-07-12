@@ -21,7 +21,7 @@ public class EventSistem : MonoBehaviour
         randomObjects = Random.Range(0, 2);
     }
 
-   /* public void MapDegistir()
+   public void MapDegistir()
     {
         if (gameManager.currentsaglik <= 75)
         {
@@ -37,7 +37,7 @@ public class EventSistem : MonoBehaviour
             Worlds1[2].SetActive(false);
             Worlds1[3].SetActive(true);
         }
-    }*/
+    }
 
     public IEnumerator Soru1Event()
     {
