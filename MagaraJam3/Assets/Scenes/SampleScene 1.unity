@@ -3749,7 +3749,7 @@ MonoBehaviour:
   "Objects1_k\xF6t\xFC": []
   Objects2_iyi: []
   "Objects2_k\xF6t\xFC": []
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 812266290}
   sonuc: 
 --- !u!4 &812266289
 Transform:
@@ -3842,7 +3842,7 @@ MonoBehaviour:
       \u0131s\u0131nma art\u0131yor. \u0130neklerin yar\u0131s\u0131 uyutulsun mu?"
     secenek1: Onaylama
     secenek2: Onayla
-    cevap: 2
+    cevap: 1
   - soru: "Ormanl\u0131k arazide petrol bulundu. Petrol \xE7\u0131kart\u0131ls\u0131n
       m\u0131?"
     secenek1: "\u0130zin verme"
@@ -3855,7 +3855,7 @@ MonoBehaviour:
   - soru: "Ormanl\u0131k araziye fabrika imar\u0131 i\xE7in izin isteniyor."
     secenek1: "G\xF6z yum"
     secenek2: "Kar\u015F\u0131 \xE7\u0131k"
-    cevap: 2
+    cevap: 1
   - soru: "Kanser a\u015F\u0131s\u0131 bulundu. \xC7ip koyulsun mu?"
     secenek1: Kabul et
     secenek2: "Kar\u015F\u0131 \xE7\u0131k"
@@ -3868,11 +3868,11 @@ MonoBehaviour:
       mi?"
     secenek1: "Kendi haline b\u0131rak"
     secenek2: "Yard\u0131m et"
-    cevap: 2
+    cevap: 1
   - soru: "Yeni bir ter\xF6r \xF6rg\xFCt\xFC kuruldu."
     secenek1: "Silah g\xF6nder"
     secenek2: "Kar\u015F\u0131 \xE7\u0131k"
-    cevap: 2
+    cevap: 1
   - soru: "Afrika'da yeni su kaynaklar\u0131 bulundu ama \xE7\u0131kar\u0131lam\u0131yor."
     secenek1: "Yard\u0131m et"
     secenek2: "Kendi haline b\u0131rak"
@@ -3881,11 +3881,11 @@ MonoBehaviour:
       var."
     secenek1: "Kendi haline b\u0131rak"
     secenek2: "Yard\u0131m et"
-    cevap: 2
+    cevap: 1
   - soru: "Yeni oyun konsollar\u0131 yay\u0131nland\u0131."
     secenek1: "Vergileri art\u0131r"
     secenek2: "Hi\xE7bir \u015Fey yapma"
-    cevap: 2
+    cevap: 1
   - soru: "Ticari sebeplerle yo\u011Fun gemi kullan\u0131m\u0131, k\xFCresel \u0131s\u0131nmay\u0131
       etkiliyor. Gemi ticareti yasaklans\u0131n m\u0131?"
     secenek1: "Yasaklans\u0131n"
@@ -3895,7 +3895,7 @@ MonoBehaviour:
       istersen 100 rehin \xF6ld\xFCr\xFClecek. Se\xE7im senin."
     secenek1: "O\u011Flunu kurtar"
     secenek2: Rehinleri kurtar
-    cevap: 2
+    cevap: 1
   - soru: "Ter\xF6ristler \xE7ok say\u0131da vatanda\u015F\u0131 rehin ald\u0131.
       \u0130stenen paray\u0131 vermezsen hepsi \xF6ld\xFCr\xFClecek."
     secenek1: "Paray\u0131 ver"
@@ -7394,19 +7394,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1364868503
 GameObject:
   m_ObjectHideFlags: 0
@@ -9093,7 +9081,7 @@ MonoBehaviour:
   m_Direction: 2
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9344,10 +9332,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -11170,18 +11158,10 @@ MonoBehaviour:
   - {fileID: 231690409}
   - {fileID: 1318020519}
   - {fileID: 1129231053}
-  Objects1_iyi:
-  - {fileID: 0}
-  - {fileID: 0}
-  "Objects1_k\xF6t\xFC":
-  - {fileID: 0}
-  - {fileID: 0}
-  Objects2_iyi:
-  - {fileID: 0}
-  - {fileID: 0}
-  "Objects2_k\xF6t\xFC":
-  - {fileID: 0}
-  - {fileID: 0}
+  Objects1_iyi: []
+  "Objects1_k\xF6t\xFC": []
+  Objects2_iyi: []
+  "Objects2_k\xF6t\xFC": []
   gameManager: {fileID: 812266290}
   sonuc: 
 --- !u!4 &2131313599

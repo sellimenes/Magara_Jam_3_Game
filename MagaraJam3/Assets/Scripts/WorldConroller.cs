@@ -14,19 +14,17 @@ public class WorldConroller : MonoBehaviour
     
     public void SetMaxSaglik(int saglik)
     {
-        dunyaSagligi.maxValue = saglik;
-        dunyaSagligi.value = 100;
+        dunyaSagligi.maxValue = 100;
+        dunyaSagligi.value = saglik;
     }
     public void DunyaSagligi(int saglik)
     {
         dunyaSagligi.value = saglik;
-
-
     }
 
     public void SetMaxMutluluk(int mutluluk)
     {
-        MutlulukOraný.maxValue = mutluluk;
+        MutlulukOraný.maxValue = 100;
         MutlulukOraný.value = mutluluk;
     }
     public void Mutluluk(int mutluluk)

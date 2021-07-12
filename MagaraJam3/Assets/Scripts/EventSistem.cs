@@ -15,9 +15,11 @@ public class EventSistem : MonoBehaviour
     public GameManager gameManager;
 
     public string sonuc;
+    float time2;
     int randomObjects;
     void Start()
     {
+        time2 = 0.3f * Time.deltaTime;
         randomObjects = Random.Range(0, 2);
     }
 
@@ -47,7 +49,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[10].SetActive(true);//araba objesi aktif olsun   
             sonuc = "";//sonuc tekrar tekrar çalýþmamasý için kapatýldý.
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[3].SetActive(true);//Kötü objelerden rastgele bir tanesi 2.dünyada aktif edildi.
 
         }
@@ -55,7 +57,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[3].SetActive(true);//iyi objelerden rastgele bir tanesi bizim dünyamýzda aktif edildi.
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_iyi[10].SetActive(true);//kötü objelerden rastgele bir tanesi 2. dünyada aktif edildi.
 
         }
@@ -67,14 +69,14 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[13].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_iyi[2].SetActive(true);
         }
         else if (sonuc == "2.2") // Ýzin verme
         {
             Objects1_iyi[1].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[13].SetActive(true);   
         }
     }
@@ -87,7 +89,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[1].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_iyi[0].SetActive(true);
 
         }
@@ -95,7 +97,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[1].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[0].SetActive(true);
         }
     }
@@ -107,7 +109,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[1].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_iyi[0].SetActive(true);
 
         }
@@ -115,7 +117,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[1].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[0].SetActive(true);
         }
     }
@@ -126,7 +128,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[5].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[16].SetActive(true);
 
         }
@@ -134,7 +136,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[16].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_iyi[5].SetActive(true);
         }
     }
@@ -145,13 +147,13 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[12].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
 
         }
         else if (sonuc == "6.2") // Yükseltme
         {
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
         }
     }
     public IEnumerator Soru7Event() // Ýnekleri uyut
@@ -161,7 +163,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[11].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[11].SetActive(true);
 
         }
@@ -169,7 +171,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[11].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[11].SetActive(true);
         }     
     }
@@ -181,7 +183,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[1].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[2].SetActive(true);
 
         }
@@ -189,7 +191,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[2].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_iyi[0].SetActive(true);
         }
     }
@@ -200,7 +202,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[6].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[6].SetActive(true);
 
         }
@@ -208,7 +210,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[6].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_iyi[6].SetActive(true);
         }
     }
@@ -219,7 +221,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[8].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_iyi[3].SetActive(true);
 
         }
@@ -227,7 +229,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[3].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[8].SetActive(true);
         }
     }
@@ -237,13 +239,13 @@ public class EventSistem : MonoBehaviour
         if (sonuc == "11.1") // Çip koyulsun
         {
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
 
         }
         else if (sonuc == "11.2") // Çip koyulmasýn
         {
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
         }
     }
     public IEnumerator Soru12Event() // BikBok yasaklansýn mý
@@ -252,13 +254,13 @@ public class EventSistem : MonoBehaviour
         if (sonuc == "12.1") // yasakla
         {
             Objects1_kötü[1].SetActive(true);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
 
         }
         else if (sonuc == "12.2") // yasaklama
         {
             Objects1_iyi[1].SetActive(true);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
         }
     }
     public IEnumerator Soru13Event() // Yýkýcý deprem sonrasý yardým
@@ -268,7 +270,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[7].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_iyi[0].SetActive(true);
 
         }
@@ -276,7 +278,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[1].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[7].SetActive(true);
         }
     }
@@ -286,13 +288,13 @@ public class EventSistem : MonoBehaviour
         if (sonuc == "14.1") // Silah gönder
         {
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
 
         }
         else if (sonuc == "14.2") // kArþý çýk
         {
             Objects1_iyi[1].SetActive(true);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
         }
     }
     public IEnumerator Soru15Event() // Afrika'da su bulundu
@@ -302,14 +304,14 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[15].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
 
         }
         else if (sonuc == "15.2") // Yardým etme
         {
             Objects1_iyi[14].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
         }
     }
     public IEnumerator Soru16Event() // Asya'da tsunami
@@ -319,13 +321,13 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[15].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
 
         }
         else if (sonuc == "16.2") // Yardým et
         {
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[15].SetActive(true);
         }
     }
@@ -335,13 +337,13 @@ public class EventSistem : MonoBehaviour
         if (sonuc == "17.1") // Vergileri artýr
         {
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
 
         }
         else if (sonuc == "17.2") // Bir þey yapma
         {
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
         }
     }
     public IEnumerator Soru18Event() // Yoðun gemi kullanýmýný durdur
@@ -350,7 +352,7 @@ public class EventSistem : MonoBehaviour
         if (sonuc == "18.1") // Durdur
         {
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[9].SetActive(true);
 
         }
@@ -358,7 +360,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[9].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
         }
     }
     public IEnumerator Soru19Event() // Oðlun kaçýrýldý
@@ -367,13 +369,13 @@ public class EventSistem : MonoBehaviour
         if (sonuc == "19.1") // OÐlunu kurtar
         {
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
 
         }
         else if (sonuc == "19.2") // Rehinleri kurtar
         {
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
         }
     }
     public IEnumerator Soru20Event() // Teröristler rehin aldý para istiyor
@@ -382,13 +384,13 @@ public class EventSistem : MonoBehaviour
         if (sonuc == "20.1") // Para ver
         {
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
 
         }
         else if (sonuc == "20.2") // Para verme
         {
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
         }
     }
     public IEnumerator Soru21Event() // Fosil yakýt tüketimi
@@ -398,7 +400,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[7].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[3].SetActive(true);
 
         }
@@ -406,7 +408,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[3].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_iyi[7].SetActive(true);
         }
     }
@@ -417,7 +419,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[8].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[15].SetActive(true);
 
         }
@@ -425,7 +427,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[14].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_iyi[8].SetActive(true);
         }
     }
@@ -436,7 +438,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_iyi[3].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_kötü[2].SetActive(true);
 
         }
@@ -444,7 +446,7 @@ public class EventSistem : MonoBehaviour
         {
             Objects1_kötü[2].SetActive(true);
             sonuc = "";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(time2);
             Objects2_iyi[4].SetActive(true);
         }
     }

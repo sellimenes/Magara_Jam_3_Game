@@ -22,15 +22,19 @@ public class GameManager : MonoBehaviour
 
     public int maxMutluluk = 100;
     public int currentMutluluk;
-
+    
     int randomid;
     public List<bool> sorulanlar;
 
     public WorldConroller worldConroller;
 
-
+    float time;
     private void Start()
     {
+        currentsaglik = maxSaglik;
+        currentMutluluk = maxMutluluk;
+        worldConroller.SetMaxSaglik(maxSaglik);
+        time = 0.3f * Time.deltaTime;
         worldConroller.Para.text = para.ToString();
         worldConroller.SetMaxSaglik(maxSaglik);
         worldConroller.SetMaxMutluluk(maxMutluluk);
@@ -46,7 +50,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
+        
+        OyunuBitir();
     }
 
 
@@ -54,7 +59,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator SoruEkle()
     {
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(time);
         eventPanel.SetActive(true);
         for (int i = 0; i < sorulanlar.Count; i++)
         {
@@ -94,20 +99,20 @@ public class GameManager : MonoBehaviour
         if (suankisoru == eventler.Sorular[0])//Özel araçlar küresel ýsýnmayý çok etkiliyor.
                                               //Yalnýzca elektrikli araçlar kullanýlsýn.
         {
-
+            
             if (deger == cevap)
             {
                 eventsistem.sonuc = "1.1";//Onayla
-                DunyaSaglýgýnýYükselt(20);
-                MutluluguDusur(10);
-                ParaYükselt(10000);
+                DunyaSaglýgýKontrol(5);
+                MutlulukKontrol(-20);
+                ParaKontrol(10000);
             }
             else
             {
                 eventsistem.sonuc = "1.2";//Onaylama
-                DunyaSaglýgýnýDusur(10);
-                MutluluguYukselt(10);
-                ParaDusur(1000);
+                DunyaSaglýgýKontrol(-35);
+                MutlulukKontrol(7);
+                ParaKontrol(-1000);
             }
             StartCoroutine(eventsistem.Soru1Event());
 
@@ -119,15 +124,15 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "2.1";//Ýzin Ver
-                DunyaSaglýgýnýYükselt(5);
-                MutluluguDusur(3);
-                ParaYükselt(10000);
+                DunyaSaglýgýKontrol(-5);
+                MutlulukKontrol(-3);
+                ParaKontrol(10000);
             }
             else
             {
                 eventsistem.sonuc = "2.2";//Ýzin Verme
-                MutluluguYukselt(3);
-                ParaDusur(1000);
+                MutlulukKontrol(3);
+                ParaKontrol(-10000);
 
             }
             StartCoroutine(eventsistem.Soru2Event());
@@ -141,12 +146,12 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "3.1";//Ýnsanlara Açýkla
-                MutluluguYukselt(10);
+                MutlulukKontrol(10);
             }
             else
             {
                 eventsistem.sonuc = "3.2";//Gizle
-                MutluluguDusur(10);
+                MutlulukKontrol(-10);
             }
             StartCoroutine(eventsistem.Soru3Event());
 
@@ -158,14 +163,14 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "4.1";
-                MutluluguYukselt(10);
-                DunyaSaglýgýnýDusur(15);
-                ParaYükselt(20);
+                MutlulukKontrol(10);
+                DunyaSaglýgýKontrol(-15);
+                ParaKontrol(20000);
             }
             else
             {
                 eventsistem.sonuc = "4.2";
-                MutluluguDusur(10);
+                MutlulukKontrol(-10);
             }
             StartCoroutine(eventsistem.Soru4Event());
 
@@ -175,16 +180,16 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "5.1";
-                MutluluguDusur(10);
-                DunyaSaglýgýnýYükselt(10);
-                ParaDusur(100000);
+                MutlulukKontrol(-15);
+                DunyaSaglýgýKontrol(10);
+                ParaKontrol(-100000);
             }
             else
             {
                 eventsistem.sonuc = "5.2";
-                MutluluguYukselt(10);
-                DunyaSaglýgýnýDusur(10);
-                ParaYükselt(10000);
+                MutlulukKontrol(10);
+                DunyaSaglýgýKontrol(-25);
+                ParaKontrol(10000);
             }
             StartCoroutine(eventsistem.Soru5Event());
 
@@ -194,16 +199,16 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "6.1";
-                MutluluguYukselt(10);
-                DunyaSaglýgýnýYükselt(10);
-                ParaDusur(10000);
+                MutlulukKontrol(5);
+                DunyaSaglýgýKontrol(10);
+                ParaKontrol(-10000);
             }
             else
             {
                 eventsistem.sonuc = "6.2";
-                MutluluguDusur(10);
-                DunyaSaglýgýnýDusur(10);
-                ParaYükselt(10000);
+                MutlulukKontrol(-15);
+                DunyaSaglýgýKontrol(-15);
+                ParaKontrol(10000);
             }
             StartCoroutine(eventsistem.Soru6Event());
 
@@ -213,16 +218,16 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "7.1";
-                MutluluguYukselt(10);
-                DunyaSaglýgýnýDusur(10);
+                MutlulukKontrol(10);
+                DunyaSaglýgýKontrol(-10);
 
             }
             else
             {
                 eventsistem.sonuc = "7.2";
-                MutluluguDusur(10);
-                DunyaSaglýgýnýYükselt(10);
-                ParaYükselt(1000);
+                MutlulukKontrol(-22);
+                DunyaSaglýgýKontrol(6);
+                ParaKontrol(-10000);
             }
             StartCoroutine(eventsistem.Soru7Event());
 
@@ -233,14 +238,14 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "8.1";
-                MutluluguYukselt(10);
+                MutlulukKontrol(10);
             }
             else
             {
                 eventsistem.sonuc = "8.2";
-                MutluluguDusur(10);
-                DunyaSaglýgýnýDusur(10);
-                ParaYükselt(1000000);
+                MutlulukKontrol(-10);
+                DunyaSaglýgýKontrol(-21);
+                ParaKontrol(10000);
             }
             StartCoroutine(eventsistem.Soru8Event());
 
@@ -250,15 +255,15 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "9.1";
-                MutluluguYukselt(10);
-                DunyaSaglýgýnýYükselt(10);
-                ParaDusur(10000);
+                MutlulukKontrol(8);
+                DunyaSaglýgýKontrol(10);
+                ParaKontrol(-100000);
             }
             else
             {
                 eventsistem.sonuc = "9.2";
-                MutluluguDusur(10);
-                DunyaSaglýgýnýDusur(10);
+                MutlulukKontrol(-20);
+                DunyaSaglýgýKontrol(-16);
             }
             StartCoroutine(eventsistem.Soru9Event());
 
@@ -268,15 +273,15 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "10.1";
-                MutluluguDusur(10);
-                DunyaSaglýgýnýDusur(10);
-                ParaDusur(150000);
+                MutlulukKontrol(-10);
+                DunyaSaglýgýKontrol(-10);
+                ParaKontrol(150000);
             }
             else
             {
                 eventsistem.sonuc = "10.2";
-                MutluluguYukselt(10);
-                ParaDusur(150000);
+                MutlulukKontrol(10);
+                ParaKontrol(-150000);
             }
             StartCoroutine(eventsistem.Soru10Event());
 
@@ -286,16 +291,16 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "11.1";
-                MutluluguDusur(15);
-                DunyaSaglýgýnýYükselt(5);
-                ParaYükselt(845688);
+                MutlulukKontrol(-15);
+                DunyaSaglýgýKontrol(5);
+                ParaKontrol(10688);
             }
             else
             {
                 eventsistem.sonuc = "11.2";
-                MutluluguYukselt(15);
-                DunyaSaglýgýnýDusur(5);
-                ParaDusur(558776);
+                MutlulukKontrol(15);
+                DunyaSaglýgýKontrol(-5);
+                ParaKontrol(-105776);
             }
             StartCoroutine(eventsistem.Soru11Event());
 
@@ -305,16 +310,16 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "12.1";
-                MutluluguDusur(10);
-                DunyaSaglýgýnýYükselt(10);
-                ParaDusur(124850);
+                MutlulukKontrol(-10);
+                DunyaSaglýgýKontrol(10);
+                ParaKontrol(-124850);
             }
             else
             {
                 eventsistem.sonuc = "12.2";
-                DunyaSaglýgýnýDusur(10);
-                ParaYükselt(1055677);
-                MutluluguYukselt(5);
+                DunyaSaglýgýKontrol(-10);
+                ParaKontrol(105677);
+                MutlulukKontrol(5);
             }
             StartCoroutine(eventsistem.Soru12Event());
 
@@ -324,35 +329,33 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "13.1";
-                DunyaSaglýgýnýYükselt(10);
-                ParaDusur(20648);
-                MutluluguYukselt(10);
+                DunyaSaglýgýKontrol(-10);                
+                MutlulukKontrol(-10);
             }
             else
             {
                 eventsistem.sonuc = "13.2";
-                DunyaSaglýgýnýDusur(10);
-                MutluluguDusur(15);
-
+                DunyaSaglýgýKontrol(10);
+                MutlulukKontrol(15);
+                ParaKontrol(-100500);
             }
             StartCoroutine(eventsistem.Soru13Event());
-
         }
         if (suankisoru == eventler.Sorular[13])
         {
             if (deger == cevap)
             {
                 eventsistem.sonuc = "14.1";
-                MutluluguDusur(10);
-                DunyaSaglýgýnýDusur(10);
-                ParaYükselt(10000000);
+                MutlulukKontrol(-28);
+                DunyaSaglýgýKontrol(-10);
+                ParaKontrol(100000);
             }
             else
             {
                 eventsistem.sonuc = "14.2";
-                DunyaSaglýgýnýYükselt(10);
-                ParaDusur(2000025);
-                MutluluguYukselt(7);
+                DunyaSaglýgýKontrol(10);
+                ParaKontrol(-200000);
+                MutlulukKontrol(7);
             }
             StartCoroutine(eventsistem.Soru14Event());
 
@@ -362,15 +365,15 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "15.1";
-                MutluluguYukselt(10);
-                DunyaSaglýgýnýYükselt(10);
-                ParaDusur(1054600);
+                MutlulukKontrol(10);
+                DunyaSaglýgýKontrol(10);
+                ParaKontrol(-104600);
             }
             else
             {
                 eventsistem.sonuc = "15.2";
-                DunyaSaglýgýnýDusur(10);
-                MutluluguDusur(10);
+                DunyaSaglýgýKontrol(-10);
+                MutlulukKontrol(-10);
             }
             StartCoroutine(eventsistem.Soru15Event());
 
@@ -381,15 +384,15 @@ public class GameManager : MonoBehaviour
             {
                 eventsistem.sonuc = "16.1";
 
-                DunyaSaglýgýnýDusur(10);
-                MutluluguDusur(10);
+                DunyaSaglýgýKontrol(-10);
+                MutlulukKontrol(-10);
             }
             else
             {
                 eventsistem.sonuc = "16.2";
-                MutluluguYukselt(10);
-                DunyaSaglýgýnýYükselt(10);
-                ParaDusur(1500020);
+                MutlulukKontrol(10);
+                DunyaSaglýgýKontrol(10);
+                ParaKontrol(-150020);
             }
             StartCoroutine(eventsistem.Soru16Event());
 
@@ -399,14 +402,14 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "17.1";
-                MutluluguYukselt(10);
-                ParaDusur(5);
+                MutlulukKontrol(-25);
+                ParaKontrol(50000);
             }
             else
             {
                 eventsistem.sonuc = "17.2";
-                ParaYükselt(20);
-                MutluluguDusur(10);
+                ParaKontrol(-20000);
+                MutlulukKontrol(10);
             }
             StartCoroutine(eventsistem.Soru17Event());
 
@@ -416,14 +419,15 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "18.1";
-                MutluluguDusur(5);
-                ParaYükselt(205000);
+                DunyaSaglýgýKontrol(5);
+                
+                ParaKontrol(-205000);
             }
             else
             {
                 eventsistem.sonuc = "18.2";
-                MutluluguYukselt(15);
-                ParaDusur(1236000);
+                DunyaSaglýgýKontrol(5);
+                ParaKontrol(123000);
 
             }
             StartCoroutine(eventsistem.Soru18Event());
@@ -434,14 +438,14 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "19.1";
-                DunyaSaglýgýnýYükselt(10);
-                ParaDusur(150020);
+
+                DunyaSaglýgýKontrol(-10);
             }
             else
             {
                 eventsistem.sonuc = "19.2";
-                DunyaSaglýgýnýDusur(10);
-                ParaYükselt(50002500);
+                DunyaSaglýgýKontrol(-10);
+                
             }
             StartCoroutine(eventsistem.Soru19Event());
 
@@ -451,13 +455,16 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "20.1";
-                MutluluguDusur(20);
+                MutlulukKontrol(-20);
+                ParaKontrol(-350000);
 
             }
             else
             {
                 eventsistem.sonuc = "20.2";
-                MutluluguYukselt(20);
+                DunyaSaglýgýKontrol(-20);
+                MutlulukKontrol(-20);
+                ParaKontrol(200000);
             }
             StartCoroutine(eventsistem.Soru20Event());
 
@@ -467,16 +474,16 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "21.1";
-                MutluluguYukselt(10);
-
-                ParaDusur(1000050);
+                MutlulukKontrol(10);
+                DunyaSaglýgýKontrol(10);
+                ParaKontrol(-100050);
             }
             else
             {
                 eventsistem.sonuc = "21.2";
-                DunyaSaglýgýnýDusur(10);
-
-                MutluluguDusur(10);
+                DunyaSaglýgýKontrol(-19);
+                ParaKontrol(100050);
+                MutlulukKontrol(-15);
             }
             StartCoroutine(eventsistem.Soru21Event());
 
@@ -486,16 +493,16 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "22.1";
-                MutluluguYukselt(10);
-                DunyaSaglýgýnýYükselt(10);
-                ParaDusur(1002000);
+                MutlulukKontrol(-20);
+                DunyaSaglýgýKontrol(10);
+                ParaKontrol(-102000);
             }
             else
             {
                 eventsistem.sonuc = "22.2";
-                DunyaSaglýgýnýDusur(10);
-                ParaYükselt(100250);
-                MutluluguDusur(10);
+                DunyaSaglýgýKontrol(-23);
+                ParaKontrol(100250);
+                MutlulukKontrol(24);
             }
             StartCoroutine(eventsistem.Soru22Event());
 
@@ -505,75 +512,63 @@ public class GameManager : MonoBehaviour
             if (deger == cevap)
             {
                 eventsistem.sonuc = "23.1";
-                DunyaSaglýgýnýYükselt(20);
-                MutluluguDusur(10);
-                ParaDusur(100200);
+                DunyaSaglýgýKontrol(20);
+                
+                ParaKontrol(-100200);
             }
             else
             {
                 eventsistem.sonuc = "23.2";
-                DunyaSaglýgýnýDusur(10);
-                ParaYükselt(100500);
-                MutluluguYukselt(15);
+                DunyaSaglýgýKontrol(-14);
+                ParaKontrol(100500);
+                
             }
             StartCoroutine(eventsistem.Soru23Event());
 
         }
-        /*if (suankisoru == eventler.Sorular[23])
-        {
-            if (deger == cevap)
-            {
-                eventsistem.sonuc = "24.1";
-                DunyaSaglýgýnýYükselt(20);
-
-                ParaDusur(750000);
-            }
-            else
-            {
-                eventsistem.sonuc = "24.2";
-                DunyaSaglýgýnýDusur(10);
-                ParaYükselt(568000);
-            }
-            //StartCoroutine(eventsistem.Soru23Event());
-        }*/
+        
 
         StartCoroutine(SoruEkle());
     }
 
-    void DunyaSaglýgýnýDusur(int dusur)
+   
+    public void DunyaSaglýgýKontrol(int saglik)
     {
-        currentsaglik -= dusur;
+        currentsaglik += saglik;
         worldConroller.DunyaSagligi(currentsaglik);
-    }
-    void DunyaSaglýgýnýYükselt(int yukselt)
-    {
-        currentsaglik += yukselt;
-        worldConroller.DunyaSagligi(currentsaglik);
+        if (currentsaglik >= 100)
+        {
+            currentsaglik = 100;
+        }
     }
 
-    void MutluluguDusur(int dusur)
-    {
-        currentMutluluk -= dusur;
-        worldConroller.Mutluluk(currentMutluluk);
-    }
-    void MutluluguYukselt(int yukselt)
-    {
-        currentMutluluk += yukselt;
-        worldConroller.Mutluluk(currentMutluluk);
-    }
 
-    public void ParaDusur(int dusur)
+    public void MutlulukKontrol(int mutluluk)
     {
-        para -= dusur;
-        worldConroller.Para.text = para.ToString();
+        currentMutluluk += mutluluk;
+       worldConroller.Mutluluk(currentMutluluk);
+        if (currentMutluluk >= 100)
+        {
+            currentMutluluk = 100;
+        }
     }
-    public void ParaYükselt(int yükselt)
+   
+    public void ParaKontrol(int para)
     {
-        para += yükselt;
+        para += para;
         worldConroller.Para.text = para.ToString();
     }
     public void GeriCýk()
     {
         SceneManager.LoadScene(0);
     }
+
+    public void OyunuBitir()
+    {
+        if (currentMutluluk <= 0||para<=-500000||currentsaglik<=0)
+        {
+            SceneManager.LoadScene(3);
+        }
+    }
+
 }
