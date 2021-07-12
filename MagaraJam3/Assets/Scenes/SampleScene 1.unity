@@ -2589,6 +2589,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2604,6 +2605,34 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4596bc78877c53a4f87161b20f49a4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Worlds1:
+  - {fileID: 97465363}
+  - {fileID: 285749948}
+  - {fileID: 1509620481}
+  - {fileID: 340208431}
+  Worlds2:
+  - {fileID: 1291438140}
+  - {fileID: 231690409}
+  - {fileID: 1318020519}
+  - {fileID: 1129231053}
+  Objects1_iyi: []
+  "Objects1_k\xF6t\xFC": []
+  Objects2_iyi: []
+  "Objects2_k\xF6t\xFC": []
+  gameManager: {fileID: 0}
+  sonuc: 
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -3686,6 +3715,7 @@ GameObject:
   - component: {fileID: 812266289}
   - component: {fileID: 812266291}
   - component: {fileID: 812266290}
+  - component: {fileID: 812266288}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3693,6 +3723,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &812266288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812266287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4596bc78877c53a4f87161b20f49a4e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Worlds1:
+  - {fileID: 97465363}
+  - {fileID: 285749948}
+  - {fileID: 1509620481}
+  - {fileID: 340208431}
+  Worlds2:
+  - {fileID: 1291438140}
+  - {fileID: 231690409}
+  - {fileID: 1318020519}
+  - {fileID: 1129231053}
+  Objects1_iyi: []
+  "Objects1_k\xF6t\xFC": []
+  Objects2_iyi: []
+  "Objects2_k\xF6t\xFC": []
+  gameManager: {fileID: 0}
+  sonuc: 
 --- !u!4 &812266289
 Transform:
   m_ObjectHideFlags: 0
@@ -7336,7 +7394,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1364868503
 GameObject:
   m_ObjectHideFlags: 0
@@ -8974,9 +9044,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -339.83}
+  m_AnchoredPosition: {x: 5, y: 16.138062}
   m_SizeDelta: {x: 20, y: 368.03}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.9836129}
 --- !u!114 &1696930427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9023,11 +9093,23 @@ MonoBehaviour:
   m_Direction: 2
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 0
-  m_Value: 52
+  m_WholeNumbers: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2131313598}
+        m_TargetAssemblyTypeName: EventSistem, Assembly-CSharp
+        m_MethodName: MapDegistir
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1708169873
 GameObject:
   m_ObjectHideFlags: 0
